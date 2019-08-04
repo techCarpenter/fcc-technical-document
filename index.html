@@ -8,46 +8,81 @@
 <body>
   <nav id="navbar">
     <header id="title">
-      <h1><a class="nav-link" href="#top">Title</a></h1>
+      <h1 style="padding-left: 20px;">My Technical Document</h1>
     </header>
-    <ul id="nav-list">
-      <li><a class="nav-link" href="#Header"><strong>Header</strong></a></li>
-      <li><a class="nav-link" href="#Header1"><strong>Header1</strong></a></li>
-      <li><a class="nav-link" href="#Header2"><strong>Header2</strong></a></li>
-      <li><a class="nav-link" href="#Header3"><strong>Header3</strong></a></li>
-      <li><a class="nav-link" href="#Header4"><strong>Header4</strong></a></li>
-    </ul>
+    <div id="nav-list">
+      <a class="nav-link" href="#Intro"><strong>Intro</strong></a>
+      <a class="nav-link" href="#Section_#2"><strong>Section #2</strong></a>
+      <a class="nav-link" href="#Code_Examples"><strong>Code Examples</strong></a>
+      <a class="nav-link" href="#Shopping_List"><strong>Shopping List</strong></a>
+      <a class="nav-link" href="#Last_Paragraph"><strong>Last Paragraph</strong></a>
+    </div>
   </nav>
   <main id="main-doc">
-    <header id="top"><h1>Title</h1></header>
-    <section id="Header" class="main-section">
-      <header><h2>Header</h2></header>
+    <header id="top">
+      <h1>My Technical Document</h1>
+    </header>
+    <section id="Intro" class="main-section">
+      <header>
+        <h2>Intro</h2>
+      </header>
       <article>
         <p>I don't know how I'm going to write this much information for a sample website :P</p>
+        <p>Reasons I can't write this much:</p>
+        <ol>
+          <li>I need to keep learning code!</li>
+          <li>It's currently past my bed time...</li>
+          <li>I like coding more than writing content :P</li>
+        </ol>
+        <p>Those are great reasons to keep plugging along.</p>
       </article>
     </section>
-    <section id="Header1" class="main-section">
-      <header><h2>Header1</h2></header>
+    <section id="Section_#2" class="main-section">
+      <header>
+        <h2>Section #2</h2>
+      </header>
       <article>
-          <p></p>
+        <p>This is a very technical document indeed.</p>
       </article>
     </section>
-    <section id="Header2" class="main-section">
-      <header><h2>Header2</h2></header>
+    <section id="Code_Examples" class="main-section">
+      <header>
+        <h2>Code Examples</h2>
+      </header>
       <article>
-          <p></p>
+        <code>Dim x As New Variable(string)</code>
+        <p>Next, we'll use the variable:</p>
+        <code>x.AssignValue("This is a string.")</code>
+        <p>Now that we have the value stored in the object, we can use it.</p>
+        <code>string value = x.Value</code><br>
+        <code>return value</code>
+        <p>Whenever I start a new project, I import libraries at the top of my file.</p>
+        <code>Import System.Threading</code>
+        <p>All of these lines have been written in VB.net. </p>
       </article>
     </section>
-    <section id="Header3" class="main-section">
-      <header><h2>Header3</h2></header>
+    <section id="Shopping_List" class="main-section">
+      <header>
+        <h2>Shopping List</h2>
+      </header>
       <article>
-        <p></p>
+        <p>This is my shopping list:</p>
+        <ul>
+          <li>Eggs</li>
+          <li>Milk</li>
+          <li>Cheese</li>
+          <li>Black Beans</li>
+          <li>Chicken breasts</li>
+        </ul>
+        <p>PLEASE DO NOT FORGET THE MILK</p>
       </article>
     </section>
-    <section id="Header4" class="main-section">
-      <header><h2>Header4</h2></header>
+    <section id="Last_Paragraph" class="main-section">
+      <header>
+        <h2>Last Paragraph</h2>
+      </header>
       <article>
-          <p></p>
+        <p>This is my last paragraph!</p>
       </article>
     </section>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
@@ -55,6 +90,7 @@
   <style>
     :root {
       color: black;
+      --main-border: darkgray;
     }
 
     /* ===== Attributes ===== */
@@ -68,24 +104,33 @@
       color: black;
       text-decoration: none;
     }
-
+    code {
+      padding: auto 5px;
+      background-color: whitesmoke;
+      color: darkgray;
+      border-radius: 3px;
+    }
     /* ===== Classes ===== */
     .main-section {
       padding-left: 20px;
       margin: 20px;
-      height: 500px;
+    }
+
+    .nav-link {
+      padding-left: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-top: solid 1px var(--main-border);
     }
 
     /* ===== IDs ===== */
     #top {
       text-align: center;
     }
-    #title {
-      padding-left: 20px;
-    }
+
     #nav-list {
       border: solid;
-      border-color: darkgray;
+      border-color: var(--main-border);
       border-width: 1px;
       padding: 0;
       display: flex;
@@ -93,17 +138,6 @@
       align-content: flex-start;
       width: 100%;
       list-style: none;
-    }
-
-    #nav-list>li {
-      padding: 10px;
-      text-indent: 0;
-      border-top: solid;
-      border-bottom: solid;
-      border-collapse: collapse;
-      border-color: darkgray;
-      border-width: 1px;
-      padding-left: 30px;
     }
 
     #main-doc {
